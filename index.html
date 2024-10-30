@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bocado Secreto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+<!--HEADER BS-->
+  <header class="head-color">
+    <div class="centrado-ql">
+        <img src="imagenes/logo2.png" id="logo">
+          <article class="spr">
+            <img src="imagenes/logo-h.png" id="logo4">
+            <span class="desplazar" onclick="desplazar('hoy')">Destacados de hoy</span>
+            <span class="desplazar" onclick="desplazar('productos')">Postres</span>
+            <span class="desplazar" onclick="desplazar('Ingredientes')">Ingredientes</span>
+            <span class="desplazar" onclick="desplazar('contacto')">Nosotros</span>
+          </article>
+          <input type="search" name="Buscar" id="barra">
+          <img class="cart-icon cart-show" src="imagenes/carrito.png" onclick="toggleCart()" id="carritou">
+    </div>
+  </header>
+<!--FIN HEADER BS-->
+
+<!--FRONT 1-->
+<main>
+  <section class="deslice">
+    <div class="carousel">
+      <div class="carousel-inner">
+          <div class="carousel-item">
+              <img src="imagenes/fp1.png" id="frontp">
+          </div>
+          <div class="carousel-item">
+              <img src="imagenes/fp2.png" id="frontp">
+          </div>
+          <div class="carousel-item">
+              <img src="imagenes/fp3.png" id="frontp">
+          </div>
+          <div class="carousel-item">
+            <img src="imagenes/fp5.png" id="frontp">
+          </div>
+          <div class="carousel-item">
+            <img src="imagenes/fp6.png" id="frontp">
+          </div>
+      </div>
+      <button class="carousel-control left" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="carousel-control right" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+    
+  </section>
+
+  <article>
+
+  </article>
+
+  <h2 id="hoy" class="lora-uniquifier centrado-if">Postres Destacados</h2>
+  <section class=" ololo2"><!--POSTRES DESTACADOS-->
+    <article>
+      <img src="imagenes/d1.jpeg" id="postres-d">
+      <p class="olop">Torta en Vaso (250grs) </p>
+      <p class="olop3">$2500</p>
+      <button class="btnbtn olop2" onclick="addToCart(2500, 'Torta en Vaso (250grs)')">Agregar al Carrito</button>
+    </article>
+
+    <article>
+      <img src="imagenes/d2.jpeg" id="postres-d">
+      <p class="olop">Rollos de canela con crema  (4uds)</p>
+      <p class="olop3">$5500</p>
+      <button class="btnbtn olop2" onclick="addToCart(5500, 'Rollos de canela con crema  (4uds)')">Agregar al Carrito</button>
+    </article>
+
+    <article>
+      <img src="imagenes/d3.jpeg" id="postres-d">
+      <p class="olop">Coralletitas (15uds) </p>
+      <p class="olop3">$3000</p>
+      <button class="btnbtn olop2" onclick="addToCart(3000, 'Coralletitas (15uds) ')">Agregar al Carrito</button>
+    </article>
+
+    <article>
+      <img src="imagenes/d4.jpeg" id="postres-d">
+      <p class="olop">Postre frutilla (450grs) </p>
+      <p class="olop3">$3000</p>
+      <button class="btnbtn olop2" onclick="addToCart(3000, 'Postre frutilla (450grs)')">Agregar al Carrito </button> 
+    </article>
+  
+  
+    </section>
+    <section class="ololo2">
+      <article>
+        <img src="imagenes/d5.jpeg" id="postres-d">
+        <p class="olop">Galletas surtidas (35uds) </p>
+        <p class="olop3">$5500</p>
+        <button class="btnbtn olop2" onclick="addToCart(5500, 'Galletas surtidas (35uds) ')">Agregar al Carrito</button>
+      </article>
+
+      <article>
+        <img src="imagenes/d6.jpg"  id="postres-d">
+        <p class="olop">Bocado Secreto (500grs) </p>
+        <p class="olop3">$2500</p>
+        <button class="btnbtn olop2" onclick="addToCart(2500, 'Bocado Secreto (500grs)')">Agregar al Carrito</button>
+      </article>
+
+      <article>
+        <img src="imagenes/d7.jpg"  id="postres-d">
+        <p class="olop">Cupcakes Mixtos (12uds) </p>
+        <p class="olop3">$12.500</p>
+        <button class="btnbtn olop2" onclick="addToCart(12.500, 'Cupcakes Mixtos (12uds)')">Agregar al Carrito</button>
+      </article>
+
+      <article>
+        <img src="imagenes/d8.jpg"  id="postres-d">
+        <p class="olop">Cupcake de frambuesa (250grs) </p>
+        <p class="olop3">$1200</p>
+        <button class="btnbtn olop2" onclick="addToCart(1200, 'Cupcake de frambuesa (250grs)')">Agregar al Carrito</button>
+
+      </article>
+  </section><!--FIN POSTRES DESTACADOS-->
+
+  <article id="Ingredientes" class="centrado-qlo">
+    <img src="imagenes/cosooso.png" id="mnb">
+  </article>
+
+
+    
+
+  <h2 id="productos" class="lora-uniquifier centrado-if">Pedidos Casuales</h2>
+  <section class=" ololo2"><!--POSTRES ABAJO-->
+    <article>
+      <img src="imagenes/1.jpg" id="postres-d">
+      <p class="olop">Mini Postre de Frutlla (250grs) </p>
+      <p class="olop3">$2500</p>
+      <button class="btnbtn olop2" onclick="addToCart(2500, 'Mini Postre de Frutlla 250grs')">Agregar al Carrito</button>
+    </article>
+
+    <article>
+      <img src="imagenes/2.jpg" id="postres-d">
+      <p class="olop">Trufas de Chocolate  (25uds)</p>
+      <p class="olop3">$5500</p>
+      <button class="btnbtn olop2" onclick="addToCart(5500, 'Trufas en Cholocate  (4uds)')">Agregar al Carrito</button>
+    </article>
+
+    <article>
+      <img src="imagenes/3.jpg" id="postres-d">
+      <p class="olop">Torta Frutifresa (20 porciones) </p>
+      <p class="olop3">$32.500</p>
+      <button class="btnbtn olop2" onclick="addToCart(32.5000, 'Torta Frutifresa (15uds)')">Agregar al Carrito</button>
+    </article>
+
+    <article>
+      <img src="imagenes/4.jpg" id="postres-d">
+      <p class="olop">Torta de frutilla (450grs) </p>
+      <p class="olop3">$3000</p>
+      <button class="btnbtn olop2" onclick="addToCart(3000, 'Torta de frutilla (450grs)')">Agregar al Carrito </button> 
+    </article>
+  
+  
+    </section>
+    <section class="ololo2">
+      <article>
+        <img src="imagenes/5.jpg" id="postres-d">
+        <p class="olop">Frutillas con chocolate (35uds) </p>
+        <p class="olop3">$5500</p>
+        <button class="btnbtn olop2" onclick="addToCart(5500, 'Frutillas de Casa (35uds)')">Agregar al Carrito</button>
+      </article>
+
+      <article>
+        <img src="imagenes/6.jpg"  id="postres-d">
+        <p class="olop">Torta Costa Rama (500grs) </p>
+        <p class="olop3">$4500</p>
+        <button class="btnbtn olop2" onclick="addToCart(4500, 'Torta Costa Rama (500grs)')">Agregar al Carrito</button>
+      </article>
+
+      <article>
+        <img src="imagenes/7.jpg"  id="postres-d">
+        <p class="olop">Postre tres leches (450grs) </p>
+        <p class="olop3">$4000</p>
+        <button class="btnbtn olop2" onclick="addToCart(4000, 'Postre de Guinda')">Agregar al Carrito</button>
+      </article>
+
+      <article>
+        <img src="imagenes/8.jpg"  id="postres-d">
+        <p class="olop">Cupcake de Oreo (250grs) </p>
+        <p class="olop3">$1200</p>
+        <button class="btnbtn olop2" onclick="addToCart(1200, 'Cupcake de Oreo (250grs)')">Agregar al carrito</button>
+      </article>
+  </section><!--FIN POSTRES ABAJO-->
+
+</div>
+</main>
+
+<!--INTEGRANTES-->
+<section>
+  <h2 id="contacto" class="lora-uniquifier RosaMedio">Nosotros somos los integrantes</h2>
+  <section class="mhm">
+        <div clasins="container">
+          <div class="container">
+              <div class="team">
+  
+               <div class="team-member">
+                  <a class="perfil" href="https://sofiacadu.github.io/Mi_portafolio_final/" ><img class="img-grupo" src="imagenes/sofi.jpg" id="img-group"></a>
+                  <p class="Letras">Sofía Cáceres</p>
+                </div>
+  
+                <div class="team-member">
+                  <a class="perfil" href="https://giovacudme.github.io/Mi-portafolio-personal/"><img class="img-grupo" src="imagenes/giovanni.jpg" id="img-group"></a>
+                  <p class="Letras">Giovanni Molinet</p>
+                </div>
+  
+               <div class="team-member">
+                  <a class="perfil" href="https://diegomkxc.github.io/portafolio/?authuser=0"><img class="img-grupo" src="imagenes/die.jpg" id="img-group"></a>
+                  <p class="Letras">Diego Rojas</p>
+                </div>
+  
+               <div class="team-member">
+                  <a class="perfil" href="https://emiliapazarredondo.github.io/Segundo-Portafolio/"><img class="img-grupo"  src="imagenes/mim.jpg" id="img-group"></a>
+                  <p class="Letras">Emilia Arredondo</p>
+                </div>
+  
+               <div class="team-member">
+                  <a class="perfil" href="https://cristofoo.github.io/portafoliomio/"><img class="img-grupo" src="imagenes/pajas.jpg" id="img-group"></a>
+                  <p class="Letras">Cristofer Fuentes</p>
+                </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!--FIN INTEGRANTES-->
+</section>
+
+<!--CARRITO COMPRAS-->
+
+
+<div class="cart" id="cart">
+  <h3 class="RosaMedio ">Tu Carrito de Compras</h3>
+  <ul id="cart-items"></ul>
+  <div class="total" id="total-price">Total: $0</div>
+</div>
+
+
+<!--FINAL, AL FIIIIN-->
+<footer>
+  <div class="footer-content">
+      <div class="footer-section">
+        <img src="imagenes/logofooter.png" id="lf">
+        <img src="imagenes/pngwing.com.png" id="wowow">
+          <p>Teléfono: <a href="tel:+56222828710">+56 9 8987 6456</a></p>
+          <p>Horario: Lunes a Domingo de 09:00 a 20:00 h</p>
+          <p>Dirección: Av.Padre Hurtado, La Cisterna, Santiago</p>
+          <p>Estacionamiento: Perú 7987, La Cisterna, Santiago</p>
+      </div>
+      <div class="footer-section">
+          <h3>Productos</h3>
+          <ul>
+              <li>Decoraciones</li>
+              <li>Empanadas</li>
+              <li>Postres</li>
+              <li>Tortas Diet</li>
+              <li>Tortas Helada merengue</li>
+              <li>Foto Torta</li>
+              <li>Tortas de Bizcocho</li>
+              <li>Tortas Mixtas</li>
+          </ul>
+      </div>
+      <div class="footer-section">
+          <h3>Información</h3>
+          <ul>
+              <li>Términos y condiciones</li>
+              <li>Preguntas frecuentes</li>
+              <li>Listado de Precios</li>
+              <li>Tienda física</li>
+              <li>Contáctanos</li>
+          </ul>
+      </div>
+      <div class="footer-section">
+          <h3>Métodos de pago</h3>
+          <img src="imagenes/webb.png" id="web">
+          <p>Tarjetas de Crédito y Débito</p>
+      </div>
+      <div class="footer-section">
+          <p>Encuéntranos también en:</p>
+          <a href="https://www.instagram.com/bocadosecreto.cl/"><img src="imagenes/iglol.avif" id="ig"></a>
+        
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>&copy; 2024 - Pastelería Bocado Secreto. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+
+</main>
+</body>
+<script src="script.js"></script>
+</html>
